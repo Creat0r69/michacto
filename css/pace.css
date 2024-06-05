@@ -15,6 +15,6 @@
 
 	.loader-title span { color: #a81c51; font-weight:300; font-family: 'Josefin Sans', sans-serif; text-transform: lowercase; margin: 0 100px 0 12px; }
 
-	.loader-title::before { background: url("../images/loader-img.png") no-repeat scroll 100% 100%; bottom: 0; content: ""; height: 196px; left: 50px; margin: auto; opacity: 0.8; position: absolute; right: 0; top: -150%; width: 110px; z-index: -1;
+	.loader-title::before { background: url("../images/loader-img.png") no-repeat scroll 100% 100%; bottom: 0; content: ""; height: 196px; left: 170px; margin: auto; opacity: 0.8; position: absolute; right: 0; top: -80%; width: 110px; z-index: -1;
 	animation: 2s linear 0s normal none infinite running floating; -webkit-animation: 2s linear 0s normal none infinite running floating; -moz-animation: 2s linear 0s normal none infinite running floating; 
 	-ms-animation: 2s linear 0s normal none infinite running floating; -o-animation: 2s linear 0s normal none infinite running floating; }
