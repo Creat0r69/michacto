@@ -50,13 +50,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   const selectedParts = {
-    bg: "assets/images/bg/bg.png",
-    aura: "assets/images/aura/none.png",
-    head: "assets/images/head/main.png",
-    eyes: "assets/images/eyes/none.png",
-    hat: "assets/images/hat/none.png",
-    outfits: "assets/images/outfits/none.png",
-    rightHand: "assets/images/rightHand/none.png",
+    bg: "assetsbuilder/images/bg/bg.png",
+    aura: "assetsbuilder/images/aura/none.png",
+    head: "assetsbuilder/images/head/main.png",
+    eyes: "assetsbuilder/images/eyes/none.png",
+    hat: "assetsbuilder/images/hat/none.png",
+    outfits: "assetsbuilder/images/outfits/none.png",
+    rightHand: "assetsbuilder/images/rightHand/none.png",
   };
 
   function adjustCanvasForHighDPI(canvas) {
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function onPartChange(part, fileName) {
-    selectedParts[part] = "assets/images/" + part + "/" + fileName;
+    selectedParts[part] = "assetsbuilder/images/" + part + "/" + fileName;
     updateAvatar();
   }
 

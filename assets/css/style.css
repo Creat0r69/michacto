@@ -1,0 +1,1053 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Proxima-bold";
+    src: url(../fonts/ProximaNova-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: "Proxima-extra-bold";
+    src: url(../fonts/ProximaNova-Extrabld.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: "Proxima";
+    src: url(../fonts/ProximaNova-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: "Proxima-semi-bold";
+    src: url(../fonts/ProximaNova-Semibold.ttf) format('truetype');
+}
+
+body {
+    background: #fff;
+    color: #000;
+    font-family: "Proxima";
+}
+
+html {
+    scroll-padding-top: 79px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ccc;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #133302;
+}
+
+:root {
+    --p-bold: "Proxima-bold", sans-serif;
+    --pe-bold: "Proxima-extra-bold", sans-serif;
+    --p-regular: "Proxima", sans-serif;
+    --ps-bold: "Proxima-semi-bold", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    font-family: var(--p-bold);
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 140%;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    margin: 2px 0;
+}
+
+a,
+.nav-link {
+    text-decoration: none;
+    transition: 0.2s linear;
+}
+
+.primary-btn {
+    color: #fff;
+    font-family: var(--p-bold);
+    font-size: 17px;
+    text-transform: uppercase;
+    padding: 0px 28px;
+    border: none;
+    width: 212px;
+    height: 58px;
+    border-radius: 0;
+    transition: 0.2s linear;
+    position: relative;
+    background: url(../images/btn-bg.png) no-repeat center center;
+    background-size: contain;
+
+}
+
+.secondary-btn {
+    color: #fff;
+    background: url(../images/s-btn-bg.png) no-repeat center center;
+    background-size: contain;
+    padding: 0 42px;
+    margin: 32px auto;
+}
+
+.primary-btn:hover {
+    scale: 1.02;
+}
+
+.section-title {
+    font-size: 64px;
+    font-family: var(--p-bold);
+    text-transform: capitalize;
+    margin-bottom: 16px;
+}
+
+.section-desp {
+    color: #000;
+    font-size: 22px;
+    font-family: var(--p-regular);
+}
+
+.hero-title {
+    color: transparent;
+    font-family: var(--pe-bold);
+    text-transform: uppercase;
+    font-size: 110px;
+    line-height: 110%;
+    -webkit-text-stroke: 2px #BB5D02;
+    text-stroke: 2px #BB5D02;
+}
+
+.hero-sub-title {
+    font-size: 38px;
+    font-family: var(--p-bold);
+    text-transform: capitalize;
+    color: #000;
+}
+
+.title-img {
+    max-width: 190px;
+    height: auto;
+    display: inline-block;
+}
+
+.title-img img {
+    width: 100%;
+}
+
+/* Header */
+header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    transition: 0.2s linear;
+}
+
+header.fixed {
+    position: fixed;
+    top: -80px;
+    left: 0px;
+    right: 0px;
+    margin: 0px;
+    background: #f6851b;
+    padding-block: 0px;
+}
+
+.navbar-collapse {
+    flex-grow: 0;
+}
+
+.navbar {
+    padding: 0;
+    padding-right: 16px;
+}
+
+.nav-bg {
+    background: #F6851B;
+}
+
+.navbar-brand {
+    background-color: #000;
+}
+
+.navbar-brand {
+    padding: 12px 24px !important;
+}
+
+#navbar-right .navbar-nav {
+    gap: 24px;
+}
+
+#navbar-right .navbar-nav .nav-link {
+    font-size: 18px;
+    font-family: var(--p-bold);
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 10px;
+}
+
+#navbar-right .navbar-nav .nav-link:focus,
+#navbar-right .navbar-nav .nav-link:hover,
+#navbar-right .navbar-nav .nav-link.active {
+    color: #e2e2e2;
+}
+
+a.dropdown-item {
+    font-size: 18px;
+    line-height: 1.7;
+    font-weight: 700;
+    padding: 10px;
+    color: #141414;
+    text-transform: uppercase;
+}
+
+.toggle-menu-icon {
+    width: 24px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.toggle-menu-icon span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+    background: #000;
+}
+
+.toggle-menu-icon span:nth-child(1) {
+    top: 2px;
+}
+
+.toggle-menu-icon span:nth-child(2),
+.toggle-menu-icon span:nth-child(3) {
+    top: 10px;
+}
+
+.toggle-menu-icon span:nth-child(4) {
+    top: 18px;
+}
+
+.toggle-menu-icon.open span:nth-child(1) {
+    top: 11px;
+    width: 0%;
+    left: 50%;
+}
+
+.toggle-menu-icon.open span:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.toggle-menu-icon.open span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+.toggle-menu-icon.open span:nth-child(4) {
+    top: 11px;
+    width: 0%;
+    left: 50%;
+}
+
+.navbar-toggler:focus,
+button:focus {
+    box-shadow: none;
+}
+
+.nav-top-wrapper {
+    padding: 11px 0;
+    background-color: #1E1B18;
+    margin-bottom: 20px;
+}
+
+header.fixed .nav-top-wrapper {
+    margin-bottom: 0;
+}
+
+.social-icon li a img {
+    width: 34px;
+    height: 34px;
+}
+
+/* Banner */
+.hero-banner-main {
+    background: url(../images/bannre-bg.png) no-repeat center;
+    block-size: cover;
+    padding: 260px 0;
+}
+
+.hero-text {
+    font-size: 22px;
+    font-family: var(--p-regular);
+    max-width: 795px;
+    margin: 24px auto;
+}
+
+/* Roadmap */
+.buying-section-main {
+    padding: 130px 0;
+}
+
+.buying-desp {
+    max-width: 454px;
+}
+
+.roadmap-img {
+    margin-top: 10px;
+    position: relative;
+    left: -50px;
+}
+
+.roadmap-step {
+    background-color: #F6F6F6;
+    border-radius: 16px;
+    padding: 10px;
+    margin-bottom: 16px;
+}
+
+.buying-step-inner {
+    border-radius: 16px;
+    border: 1px solid #BB5D02;
+    padding: 24px;
+    background-color: #fff;
+}
+
+.r-map-step-title {
+    font-size: 24px;
+    font-family: var(--pe-bold);
+    color: #000;
+}
+
+.r-map-step-desp {
+    font-size: 16px;
+    font-family: var(--p-regular);
+    color: #666;
+    line-height: 28px;
+}
+
+.buying-step-inner img {
+    max-width: 88px;
+    height: auto;
+    margin-left: 60px;
+}
+
+.roadmap-step:hover,
+.roadmap-step:hover .buying-step-inner {
+    background-color: #F6851B;
+    border-color: #fff;
+}
+
+.r-map-step-title span {
+    color: #d46904;
+}
+
+.roadmap-step:hover .buying-step-inner span,
+.buying-step-inner:hover .r-map-step-title {
+    color: #fff;
+}
+
+.buying-step-inner:hover .r-map-step-desp {
+    color: #fff;
+}
+
+/* Info */
+.info-section-main {
+    padding: 150px 0;
+    background-color: #090A0D;
+    background-image: url(../images/footsteps.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.info-content-bg {
+    background-color: #262626;
+}
+
+.info-content-wrapper {
+    margin-bottom: 54px;
+    padding-right: 50px;
+}
+
+.info-content-title {
+    font-family: var(--pe-bold);
+    font-size: 32px;
+    color: #F6851B;
+    margin-bottom: 10px;
+
+}
+
+.info-content-desp {
+    font-size: 16px;
+    font-family: var();
+}
+
+.info-img {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+}
+
+.info-img img {
+    width: 100%;
+    height: auto;
+}
+
+/* Eco-system  */
+.eco-system-main {
+    padding: 168px 0 95px 0;
+    background-color: #FBFEFF;
+    background-image: url(../images/eco-system-bg.png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 36%;
+
+}
+
+.eco-system-card-wrapper {
+    background-color: #F6F6F6;
+    border-radius: 16px;
+    padding: 10px;
+    margin-bottom: 16px;
+}
+
+.eco-system-inner {
+    border-radius: 16px;
+    border: 1px solid #BB5D02;
+    padding: 24px;
+    background-color: #fff;
+}
+
+.eco-system-title {
+    font-size: 22px;
+    margin-bottom: 16px;
+}
+
+.eco-system-desp {
+    font-size: 22px;
+}
+
+.eco-system-card-wrapper:hover {
+    background-color: #F6851B;
+}
+
+.eco-system-card-wrapper:hover .eco-system-inner {
+    background-color: #F6851B;
+    color: #fff;
+    border-color: #fff;
+}
+
+.eco-system-card-wrapper:hover .eco-system-desp {
+    color: #fff;
+}
+
+/* Team */
+.team-section-main {
+    padding: 168px 0 95px 0;
+    background-color: #FFFFFF;
+    background-image: url(../images/team-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.team-member-card, .roadmap-card {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 50%, rgba(246, 133, 27, 1) 50%);
+    border-radius: 16px;
+    padding: 12px;
+    border-bottom: 8px solid #F6851B;
+}
+
+.member-img {
+    background: #fff;
+    border-radius: 16px;
+    border: #BB5D02 1px solid;
+    margin: 0 auto;
+    transition: .2s linear;
+    display: flex;
+    justify-content: center;
+    align-items: last baseline;
+
+}
+
+.member-img img {
+    width: 100%;
+}
+
+.team-member-card:hover .member-img {
+    transform: translateY(-30px);
+}
+
+.member-details .designation {
+    font-size: 24px;
+    font-family: var(--p-regular);
+}
+
+.member-details .member-name {
+    font-size: 30px;
+    font-family: var(--p-bold);
+}
+
+/* Partner */
+.partner-section-main {
+    padding: 165px 0 150px 0;
+    background: url(../images/partner-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.partner-section-desp {
+    max-width: 780px;
+    margin: 0 auto;
+    margin-bottom: 64px;
+}
+
+.partner-img {
+    width: 100%;
+}
+
+.partner-img img {
+    width: 100%;
+    height: auto;
+}
+
+/* Roadmap */
+.roadmap-section-main {
+    padding: 150px 0 130px 0;
+    background-image: url(../images/team-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.roadmap-phase-list {
+    list-style: disc;
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 16px;
+}
+
+.roadmap-phase-list li {
+    margin-left: 24px;
+    font-size: 24px;
+    font-family: var(--ps-bold);
+    line-height: 300%;
+}
+
+.phase-no {
+    margin-top: 24px;
+    margin-bottom: 14px;
+    font-size: 30px;
+    font-family: var(--pe-bold);
+}
+
+/* Footer  */
+footer {
+    padding: 90px 0;
+    background: url(../images/partner-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.footer-title {
+    font-size: 26px;
+    font-family: var(--pe-bold);
+    text-transform: uppercase;
+}
+
+.footer-link-wrapper {
+    display: flex;
+    align-items: center;
+    justify-self: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-right: 40px;
+    margin-top: 30px;
+
+}
+
+.footer-nav-link {
+    font-family: var(--p-bold);
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fff;
+    display: block;
+}
+
+.footer-nav-link:hover {
+    color: #fff;
+}
+
+.footer-social-links {
+    padding-left: 40px;
+}
+
+.footer-social-links-grp {
+    margin-top: 20px;
+}
+
+.cpmny-info {
+    font-size: 18px;
+    font-family: var(--p-regular);
+}
+
+.copy-right-text {
+    margin-top: 20px;
+    font-size: 18px;
+    font-family: var(--p-bold);
+}
+
+@media (min-width: 1500px) {
+    .container {
+        max-width: 1464px;
+    }
+
+}
+
+@media (max-width: 1700px) {}
+
+@media (max-width: 1500px) {
+    #navbar-right .navbar-nav {
+        gap: 4px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .navbar-brand {
+        padding: 12px !important;
+    }
+
+    #navbar-right .navbar-nav .nav-link {
+        font-size: 15px;
+        padding-inline: 10px;
+        font-weight: 600;
+    }
+
+    .roadmap-phase-list li {
+        margin-left: 24px;
+        font-size: 18px;
+        /* line-height: 200%; */
+    }
+
+}
+
+@media (max-width: 1199px) {
+
+    .section-title {
+        font-size: 44px;
+    }
+
+    .primary-btn {
+        font-size: 16px;
+        border: 0;
+        padding: 12px 12px;
+    }
+
+    #navbar-right .navbar-nav {
+        gap: 0;
+        max-width: 960px;
+        margin: 0 auto;
+        padding-bottom: 10px;
+    }
+
+    header.fixed, header {
+        padding-block: 0;
+    }
+
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #1E1B18;
+        width: 100%;
+    }
+
+    .navbar {
+        padding-block: 12px;
+    }
+
+    .navbar-brand img {
+        max-width: 180px;
+    }
+
+    .hero-title {
+        font-size: 80px;
+    }
+
+    .title-img {
+        max-width: 100px;
+    }
+
+    .buying-desp {
+        max-width: 100%;
+    }
+
+    .roadmap-img {
+        margin-top: 30px;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, -0%);
+
+    }
+
+    .member-img {
+        max-width: 100%;
+
+    }
+
+    .roadmap-card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .roadmap-phase-list {
+        padding: 12px;
+        height: 100%;
+    }
+
+    .roadmap-phase-list li {
+        margin-left: 24px;
+        font-size: 20px;
+        line-height: 200%;
+    }
+
+    .buying-step-inner img {
+        margin-left: 20px;
+    }
+
+    .roadmap-section-main,
+    .partner-section-main,
+    .team-section-main,
+    .eco-system-main,
+    .info-section-main,
+    .buying-section-main {
+        padding: 100px 0;
+    }
+
+    .info-content-wrapper {
+        margin-bottom: 34px;
+        padding-right: 30px;
+    }
+
+    .partner-section-desp {
+        margin-bottom: 40px;
+    }
+
+    footer {
+        padding: 60px 0;
+    }
+
+    .footer-link-wrapper {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 991px) {
+
+
+    .primary-btn {
+        font-size: 16px;
+        padding: 10px 24px;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    #navbar-right .navbar-nav {
+        gap: 0;
+        max-width: 720px;
+    }
+
+    #navbar-right .navbar-nav .nav-link {
+        padding: 8px 20px;
+    }
+
+    .hero-section-main {
+        padding: 120px 0 120px 0;
+    }
+
+    .primary-btn {
+        font-size: 16px;
+        padding: 14px 14px;
+    }
+
+    .info-content-wrapper {
+        margin-bottom: 42px;
+        padding-right: 0px;
+    }
+
+    .footer-link-wrapper {
+        justify-content: center;
+        margin-top: 10px;
+        padding-right: 0;
+    }
+
+    .footer-social-links {
+        padding-left: 0px;
+    }
+
+    .hero-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-banner-main {
+        padding: 170px 0;
+    }
+
+    .roadmap-section-main, .partner-section-main, .team-section-main, .eco-system-main, .info-section-main, .buying-section-main {
+        padding: 80px 0;
+    }
+
+    .info-img {
+        text-align: center;
+    }
+
+    .section-desp.buying-desp+img,
+    .info-img img {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .secondary-btn {
+        margin: 0px auto;
+    }
+
+    .hero-banner-main {
+        padding: 140px 0;
+    }
+}
+
+@media (max-width: 767px) {
+    p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .nav-top-wrapper {
+        margin-bottom: 0px;
+        display: none;
+    }
+
+    .header-buttom {
+        margin: 0 !important;
+        padding: 0;
+        max-width: 100% !important;
+    }
+
+    .navbar {
+        padding-block: 0px;
+        padding-right: 0px;
+    }
+
+    .hero-title {
+        font-size: 68px;
+    }
+
+    .hero-sub-title {
+        font-size: 28px;
+    }
+
+    .hero-text {
+        font-size: 18px;
+    }
+
+    .primary-btn {
+        font-size: 16px;
+        padding: 14px 14px;
+    }
+
+    .team-section-main, .eco-system-main, .info-section-main, .partner-section-main, .roadmap-section-main, .buying-section-main, footer {
+        padding: 60px 0 60px 0;
+    }
+
+    .member-details .designation {
+        font-size: 18px;
+    }
+
+    .member-details .member-name {
+        font-size: 18px;
+    }
+
+    header.fixed {
+        position: fixed;
+        top: 0;
+        left: 0px;
+        right: 0px;
+        margin: 0px;
+        background: #fff;
+        padding-block: 0px;
+    }
+
+    .section-desp {
+        font-size: 18px;
+    }
+
+    .partner-section-desp {
+        margin-bottom: 40px;
+    }
+
+
+}
+
+@media (max-width: 576px) {
+
+    header .primary-btn {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .sub-title {
+        font-size: 20px;
+    }
+
+    .section-title {
+        font-size: 24px;
+        margin-bottom: 4px;
+    }
+
+    .hero-banner-main {
+        padding: 100px 0 180px;
+        background-position: bottom;
+    }
+
+    .roadmap-img {
+        width: 100%;
+    }
+
+    .section-desp {
+        font-size: 18px;
+    }
+
+    .buying-step-inner img {
+        margin-left: 0px;
+        margin-bottom: 16px;
+        height: 60px;
+    }
+
+    .eco-system-desp {
+        font-size: 18px;
+    }
+
+    .eco-system-title {
+        margin-bottom: 8px;
+    }
+
+    .buying-step-inner, .eco-system-inner {
+        padding: 16px;
+    }
+
+    .navbar-brand img {
+        max-width: 192px;
+    }
+
+    .navbar-brand {
+        padding-block: 0.75rem !important;
+        padding-inline: 0.5rem !important;
+    }
+
+    .footer-title {
+        font-size: 18px;
+    }
+
+    .footer-nav-link {
+        font-family: var(--p-regular);
+        font-size: 16px;
+    }
+
+    .partner-section-desp {
+        margin-bottom: 40px;
+    }
+
+    .roadmap-phase-list li {
+        font-size: 16px;
+    }
+
+    .phase-no {
+        margin-top: 14px;
+        font-size: 18px;
+    }
+
+    .hero-title {
+        font-size: 48px;
+    }
+
+    .hero-sub-title {
+        font-size: 20px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+        margin: 16px auto;
+    }
+
+    .title-img img {
+        width: 70px;
+    }
+
+    .team-section-main, .eco-system-main, .info-section-main, .partner-section-main, .roadmap-section-main, .buying-section-main, footer {
+        padding: 40px 0;
+    }
+
+    .eco-system-inner {
+        padding: 16px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 440px) {
+    .hero-title {
+        font-size: 40px;
+    }
+
+    .team-member-card, .roadmap-card {
+        padding: 6px;
+    }
+
+    .member-details .designation {
+        font-size: 12px;
+    }
+
+    .member-details .member-name {
+        font-size: 14px;
+    }
+}
