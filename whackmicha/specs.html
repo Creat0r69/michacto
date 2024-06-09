@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <!--The class logo-->
+        <img src="mainmenu/Logo2.png" class="classLogo">
+        <nav>
+            <ul>
+                <!--These are the button to another page-->
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="game.html">GAME</a></li>
+                <li><a href="">QA</a></li>
+                <li><a href="specs.html">SPECS</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="_header">
+        <h1>Software Requirements Specification</h1>
+        <p>for Whack-a-Professor by Group 1 CISC 3140</p>
+    </div>
+
+    <div class="_content">
+        <h2><u>Contents</u></h2>
+        <h3>1 Introduction</h3>
+        <p>
+            1.1 Document Purpose <br>
+            1.2 Product Scope <br>
+            1.3 Intended Audience and Document Overview <br>
+            1.4 Defintions, Acronyms and Abbreviations
+        </p>
+        <br>
+        <h3>2 Overall Description</h3>
+        <P>
+            2.1 Product Overview <br>
+            2.2 Product Functionality <br>
+            2.3 Design and Implementation Constraints
+        </P>
+        <br>
+        <h3>3 Specific Requirements</h3>
+        <p>
+            3.1 External Interface Requirements <br>
+            3.2 User Interfaces
+        </p>
+
+    </div>
+
+    <div class="_content">
+        <h2><u>1 Introduction</u></h2>
+        <h3>1.1 Purpose</h3>
+        <p>
+            The purpose of this page is to provide an overall description
+            and understanding of the CISC 3140 project, <br>
+            Whack-a-Professor. This document will list the specifications of the project such as game features, baseline requirements,
+            and graphics.
+        </p>
+        <h3>1.2 Product Scope</h3>
+        <p>
+            The Whack-a-Professor software is a game designed in JavaScript, CSS and html for the CISC 3140 course project.
+            The game page consists of a countdown timer of 20 seconds, a score which accumulates in increments of 10 points.
+            A play button to start the game and 6 individual desks where the professors pop up.
+            The objective of the game is to hit the professors with a mallet in order to accumulate points.
+        </p>
+        <h3>1.3 Intended Audience and Document Overview </h3>
+        <p>
+            Whack-a-Prof is intended for clients who would like a enjoy an online interactive game and
+            for Professor Murray Gross to evaluate the work of class 3140-ET6 Group 1,
+            which consists of a backbone team, a graphics team, a quality assurance team and a specifications team.
+        </p>
+        <h3>1.4 Defintions, Acronyms and Abbreviations</h3>
+        <p>
+            <ul>
+                <li>JavaScript - an object-oriented computer programming language commonly used to create interactive effects within web browsers.</li>
+                <li>CSS (Cascading Style Sheets) - is a computer language for laying out and structuring web pages. </li>
+                <li>HTML (Hypertext Markup Language) - a standardized system for tagging text files to achieve font, color, graphic, <br>
+                    and hyperlink effects on World Wide Web pages.</li>
+                <li>End users - users whom the intended product is designed for.</li>
+            </ul>
+        </p>
+    </div>
+
+    <!---------------------------------------------------------------------------------------------------->
+    <div class="_content">
+        <h2><u>2 Overall Description</u></h2>
+        <h3>2.1 Product Overview</h3>
+        <p>
+            Whack-a-Prof is a standalone software that is a variation on the traditional
+            Whack-a-Mole game. The game is intended to run on any web browser that supports
+            Javascript. The game is in a 3 by 3 grid arrangement where the Professor will
+            pop up on the screens in which the user will then have to click on the Professor
+            to “whack” him.
+            The Player has only 20 seconds to get as high of a score as possible with the mallet which the Player controls with the mouse.
+            The Professor pops up randomly and the score counter increases by 10 points when
+            the Professor is hit. <br>
+        </p>
+        <h3>2.2 Product Functionality</h3>
+        <p>
+            <ul>
+                <li>End users are users whom the intended product is designed for.</li>
+                <li>Professors pop up at random intervals </li>
+                <li>User has 20 seconds to get as much points as possible</li>
+                <li>User must use mouse cursor to “hit” the Professors</li>
+                <li>User will gain 10 points per successful hit.</li>
+                <li>There are sound effects to let the end user know whether the hit was successful or not.</li>
+            </ul>
+        </p>
+        <h3>
+            2.3 Design and Implementation Constraints
+        </h3>
+        <p>
+            The Whack-a-Prof is designed to run in any PC web browser,
+            The game is not designed to work properly on mobile devices such as cellphones and tablets.
+            The game has been restricted to the languages of vanilla JavaScript, CSS and HTML.
+            Images are conveyed in SVG format to maintain resolution independence.
+            Audio files must be in either MP3 or WAV format.
+        </p>
+       </div>
+
+       <!--------------------------------------------------------------------------->
+       <div class="_content">
+           <h2><u>3 Specific Requirements</u></h2>
+           <h3>3.1 External Interface Requirements</h3>
+           <p>
+            The external requirement for the game is any PC or desktop browser.
+            Once the user is on the game page the game will begin upon clicking the "Play" button and the 20 sec timer will begin, and the music will start playing.
+            The program will then add a target into the 3 by 3 holes, which is the “Professor”.
+            The User must use the mouse or touchscreen to click on the Professor and in order to accumulate points which are incremented in values of 10 points per hit.
+           </p>
+           <br>
+           <img src="/whack-a-mole/Whack A Mole/Whack A Mole/gameImage/gameInterface.png" class="center">
+           <h3>3.2 User Interfaces </h3>
+           <p>Start Screen:
+            The game can only begin when User presses the “Play” button.
+            Upon clicking “Play”, the game begins and the timer starts counting down.
+            The User must use the mouse or touchscreen to press the Professor.
+           </p>
+           <p>Game Over Screen:
+            The game is over when timer reaches 0 at which the timer will stop and no Professor will appear on the screen. The music will also stop playing when the timer reaches 0.
+            The final score is displayed and the Player will have the chance to play again.
+           </p>
+           <h3>3.1.2 Hardware Requirements</h3>
+           <p>
+             The game is intended to run in a web browser and should be able to run on most devices that support modern browsers to include desktops and laptops.
+             In order to play the game, the user must have at least a mouse or touch screen, where applicable. In order to hear the music or on-hit sound effect, the Player must also have speakers, although that is optional.
+           </p>
+       </div>
+
+
+       <div class="_content">
+           <h3>CISC 3140</h3>
+           <p>
+               <h4>Prepared by group 1 specifications:</h4>
+               <ul>
+                   <li>Mehdi Majumder</li>
+                   <li>Perry Chen</li>
+                   <li>Mohammad Alam</li>
+                   <li>Darwyn Abreu</li>
+               <br> <li>HTML version created by Bryan Sanchez</li>
+               </ul>
+           </p>
+       </div>
+</body>
+</html>

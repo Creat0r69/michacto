@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  background-image: url(mainmenu/background2.jpg);
+  /*There wont be any repeat for the background*/
+  background-repeat: no-repeat;
+  background-position: center;
+  /*The background will stay in one place if we scroll*/
+  background-attachment: fixed;
+  background-size: cover;
+  padding-left: 5%;
+  padding-right: 5%;
+  box-sizing: border-box;
+}
+
+/*Nav bar on top*/
+.navbar {
+  height: 12%;
+  display: flex;
+  align-items: center;
+}
+
+.classLogo {
+  width: 100px;
+}
+
+/*move all text to the right. text like home, game, bug, and specs*/
+nav {
+  flex: 1;
+  text-align: right;
+}
+
+nav ul li {
+  list-style: none;
+  /*Make the choice from left to right*/
+  display: inline-block;
+  /*Put some space between them to the left*/
+  margin-left: 60px;
+}
+
+nav ul li a {
+  font-size: 25px;
+  text-decoration: none;
+  color: white;
+}
+
+/*Design of the words in the middle*/
+.row {
+  color: white;
+  font-size: 20px;
+  display: flex;
+  position: absolute;
+  /*bottom: 20%;*/
+  /*margin-top: 150px;*/
+  height: 70%;
+  align-items: center;
+  justify-content: left;
+}
+
+/*Foucs on the design and position of the paragraph 
+and the phase "group one"*/
+.word {
+  flex-basis: 50%;
+}
+
+/*The members button*/
+.Memberbutton {
+  width: 180px;
+  /*word color*/
+  color: black;
+  background: white;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  padding: 12px 0;
+  border: 0;
+  border-radius: 20px;
+  outline: none;
+  margin-top: 20px;
+  cursor: pointer;
+  /*The hover effect when going back*/
+  box-shadow: inset 0 0 0 0 blue;
+  /*the sliding affect*/
+  transition: ease-out 0.3s;
+}
+
+.Memberbutton:hover {
+  /*hover effect when going from left to right*/
+  box-shadow: inset 200px 0 0 0 yellow;
+}
+
+/*Background for the modal*/
+.modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+/*everything in the modal*/
+.modalContent {
+  width: 500px;
+  height: 700px;
+  background-color: white;
+  border-radius: 4px;
+  position: relative;
+  padding-left: 10px;
+  padding-top: 50px;
+}
+
+/*The close button in the modal*/
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+._header {
+  color: white;
+  font-size: 20px;
+  position: static;
+  z-index: 999;
+  padding-bottom: 20px;
+}
+._content {
+  color: white;
+  font-size: 20px;
+  position: static;
+  z-index: 99;
+  background-color: rgba(73, 43, 207, 0.9);
+  border-radius: 25px;
+  padding: 20px;
+}
+._content h3 {
+  padding-bottom: 5px;
+  padding-top: 10px;
+}
+div + div {
+  margin-bottom: 10px;
+}
+._content ul {
+  padding-left: 10px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}

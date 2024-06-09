@@ -1,0 +1,143 @@
+/*Color of the website background*/
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+  background-image: url(gameImage/background_temp.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  cursor: auto; /*cursor added to the website*/
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*Font of the title*/
+body {
+  padding: 0;
+  margin: 0;
+  /*font was Amatic SC*/
+  font-size: 10px;
+  font-family: "Times New Roman", cursive;
+}
+
+/*Design of all h1*/
+h1 {
+  text-align: left;
+  font-family: "Reenie Beanie", cursive;
+  font-size: 8rem;
+  line-height: 0.2;
+  margin-bottom: 5;
+  padding-left: 50px;
+}
+
+.gameName {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0 3rem;
+  /*line-height: 0;*/
+  border-radius: 1rem;
+}
+
+.time {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0 3rem;
+  /*line-height: 0;*/
+  border-radius: 1rem;
+}
+.score {
+  padding: 0 3rem;
+  /*line-height: 0;*/
+  border-radius: 1rem;
+}
+
+.game {
+  width: 600px;
+  height: 500px;
+  /*background-color: green;
+  background-size: cover;*/
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+  cursor: auto;
+}
+
+.hole {
+  flex: 1 0 33.33%;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hole:after {
+  display: block;
+  background: url(gameImage/hole.png) bottom center no-repeat;
+  background-size: contain;
+  content: "";
+  width: 100%;
+  height: 170px;
+  pointer-events: none;
+  position: center;
+  bottom: -30px;
+  
+}
+
+/*Professor*/
+.professor {
+  background: url(../assetsbuilder/images/head/main.png) bottom center no-repeat;
+  background-size: 70%; /*Change the size of the professor*/
+  position: absolute;
+  object-position: top;
+  top: 100%; /*change the position the image start from*/
+  width: 100%;
+  height: 55%;
+  z-index: -1;
+  pointer-events: auto;
+  transition: all 0.2s;
+}
+
+.professor2 {
+  background: url(gameImage/trustee-01.svg) bottom center no-repeat;
+  background-size: 50%; /*Change the size of the professor*/
+  position: absolute;
+  object-position: top;
+  top: 100%; /*change the position the image start from*/
+  width: 100%;
+  height: 55%;
+  z-index: 2;
+  transition: all 0.2s;
+}
+
+.hole.up .professor {
+  top: 0;
+}
+
+.hole.up2 #professor2 {
+  top: 0;
+}
+
+.playButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  cursor: pointer;
+}
+
+a {
+  float: right;
+  width: auto;
+  font-size: large;
+}
+
+/*.top {
+  background-image: url(gameImage/concept_art1ver2.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}*/
