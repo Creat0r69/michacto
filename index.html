@@ -143,9 +143,9 @@
         </section>
         <section class="info-section-main" id="Whitepaper">
             <div class="container">
-                <h2 class="section-title info-section-title text-center text-light">Read Our whitepaper</h2>
+                <h2 class="section-title info-section-title text-center text-light">Read Our white paper</h2>
                 <p class="section-desp text-center text-light">
-                    Coming Soon
+                    Version 1
                 </p>
 
                 <div class="row pt-4 p-lg-5 mt-3 md:mt-4 lg:mt-5 align-items-center info-content-bg">
@@ -156,10 +156,13 @@
                                </p>
                         </div>
                         <div class="info-content-wrapper">
-                            <h4 class="info-content-title text-center text-lg-start">COMING SOON</h4>
-                            <p class="text-light info-content-desp text-center text-lg-start">
-                                Micha aims to be the most marketing oriented meme token on every smart chain.
-                            </p>
+                                <a id="openPdfBtn">
+                                    <div class="team-member-card">
+                                        <div class="member-img">
+                                            <img src="assets/images/white-paper.png" alt=""></div>
+                                    </div>
+                                </a>
+
                         </div>
                     </div>
                     <div class="col-lg-5">
@@ -388,6 +391,15 @@
             });
         });
 
+    </script>
+
+    <script>
+        document.getElementById('openPdfBtn').addEventListener('click', function() {
+            const link = document.createElement('a');
+            link.href = 'MichaWhitePaper.pdf'; // Replace with the actual path to your PDF file
+            link.target = '_blank'; // Open link in a new tab
+            link.click();
+        });
     </script>
 <script>(function(){if (!document.body) return;var js = "window['__CF$cv$params']={r:'8813df101a5c3d17',t:'MTcxNTI4MDU4Ni41MzQwMDA='};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='../../../cdn-cgi/challenge-platform/h/g/scripts/jsd/1b3559406bc8/main.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script></body>
 </html>
